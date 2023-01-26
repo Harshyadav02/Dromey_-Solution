@@ -6,4 +6,4 @@ def smlldiv(x):
         if(x%i == 0):
             return i
 ans = smlldiv(value)        
-print("The smallest divisor of given Number is :" ,ans)
+print("Except 1 ,The smallest divisor of given Number is :" ,ans)
