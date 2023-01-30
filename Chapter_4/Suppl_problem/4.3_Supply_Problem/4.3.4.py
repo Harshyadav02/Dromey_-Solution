@@ -1,12 +1,15 @@
 def absDifference(list):
    
-    abs_diff = abs(list[1]-list[0])
-    for i in range(2,len(list)-1):
-        diff = abs(list[i]-list[i+1])
-        abs_diff = max(abs_diff,diff)
+    abs_diff = 0
+    for i in range(0,len(list)):
+        if i == len(list)-1:
+            break
+        else:
+            diff = abs(list[i]-list[i+1])
+            abs_diff = max(abs_diff,diff)
         
     print("The maximum absolute difference B/W two element is : ",abs_diff)
      
 
-list = [6,1,2,3,4,0]
+list = [6,1,2,3]
 absDifference(list)
