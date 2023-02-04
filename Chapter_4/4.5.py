@@ -17,6 +17,6 @@ def partarr(arr,x):
         else:
             i += 1
     return arr
-arr = [200,2,49,38,4,3,2,100,2]
-print(partarr(arr,4))
+arr = [200,300,100,250,150]
+print(partarr(arr,200))
 
