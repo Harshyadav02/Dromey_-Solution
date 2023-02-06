@@ -21,3 +21,5 @@ def partarr(arr,x):
 arr = [200,-1,300,100,250,150,400,0,1000,201]
 print(partarr(arr,200))
 
+''' Note :- This code not full code. The pivoit element didn't 
+    come in the middle where we can diffenciate b/w elements '''
