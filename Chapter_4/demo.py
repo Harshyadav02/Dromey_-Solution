@@ -8,7 +8,6 @@ def partarr(arr,x):
     i = 0
     j = len(arr)-1
     while(i < j):
-        
         if arr[i] > x:
             if arr[j] <= x:
                 arr[i] ,arr[j] = arr[j] ,arr[i]
@@ -18,6 +17,6 @@ def partarr(arr,x):
         else:
             i += 1
     return arr
-arr = [200,-1,300,100,250,150,400,0,1000,201]
+arr = [200,300,100,250,150]
 print(partarr(arr,200))
 
