@@ -8,17 +8,24 @@ def partarr(arr,x):
     i = 0
     j = len(arr)-1
     while(i < j):
-        
+        if arr[i] == x:
+            temp = arr[i]
+            arr.remove(arr[i])
+            print(arr)
+            i = 0
+            j = len(arr)-1
         if arr[i] > x:
-            if arr[j] <= x:
+            if arr[j] < x:
                 arr[i] ,arr[j] = arr[j] ,arr[i]
                 j -=1
             else:
                 j -=1
         else:
             i += 1
+    x = int(len(arr)-1 /2)
+    arr.insert(x,temp)
     return arr
-arr = [200,-1,300,100,250,150,400,0,900,1000,201]
+arr = [200,1,2,7,3,9,2,100,300,400,800,750]
 print(partarr(arr,200))
 
 ''' Note :- This code not full code. The pivoit element didn't 
