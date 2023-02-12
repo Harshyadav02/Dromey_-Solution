@@ -2,31 +2,43 @@
 such that elements <= x are in one subset and element > x are in the other subset
 
 Condition:- 1. Don't use sort method 
-            2. Ordered sub-array is not required 
+            2. Ordering of sub-array is not required 
+            3. syntex should be in below manner
+                -----------------------------------------------------
+               |  smaller element | pivoit element | larger element |
+               ------------------------------------------------------
 '''
-def partarr(arr,x):
+def partarr(arr, x):
     i = 0
     j = len(arr)-1
-    while(i < j):
+    while (i < j):
         if arr[i] == x:
-            temp = arr[i]
+            
             arr.remove(arr[i])
-            print(arr)
+            i = 0
+            j = len(arr)-1
+        elif arr[j] == x:
+            
+            arr.remove(arr[j])
             i = 0
             j = len(arr)-1
         if arr[i] > x:
             if arr[j] < x:
-                arr[i] ,arr[j] = arr[j] ,arr[i]
-                j -=1
+                arr[i], arr[j] = arr[j], arr[i]
+                j -= 1
             else:
-                j -=1
+                j -= 1
         else:
             i += 1
-    x = int(len(arr)-1 /2)
-    arr.insert(x,temp)
-    return arr
-arr = [200,1,2,7,3,9,2,100,300,400,800,750]
-print(partarr(arr,200))
 
-''' Note :- This code not full code. The pivoit element didn't 
-    come in the middle where we can diffenciate b/w elements '''
+    y = 0
+    while (x > arr[y]):
+        y += 1
+    else:
+        arr.insert(y, x)
+
+    return arr
+arr = [2,1,3,8,4,1,0,8,4,7]
+print(partarr(arr, 4))
+
+
