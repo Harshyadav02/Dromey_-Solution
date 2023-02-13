@@ -34,11 +34,14 @@ def partarr(arr, x):
     y = 0
     while (x > arr[y]):
         y += 1
+        if y == len(arr):
+            arr.insert(y, x)
+            break
     else:
         arr.insert(y, x)
 
     return arr
-arr = [2,1,3,8,4,1,0,8,4,7]
-print(partarr(arr, 4))
+arr = [1,5,2,0,6,2,8,6,3,4,7,88,22,45,11]
+print(partarr(arr, 6))
 
 
