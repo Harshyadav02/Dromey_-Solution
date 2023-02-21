@@ -6,11 +6,11 @@ def merge(left,right):
     while(i <=len(left)-1 and j <= len(right)-1):
         if left[i] <= right[j]:
             temp.append(left[i])
-            i =+1
+            i = i+1
             
         else:
             temp.append(right[j])
-            j =+1
+            j = j+1
             
     temp += left[i:]
     temp += right[j:]
@@ -28,7 +28,7 @@ def findmid(arr):
         right = findmid(arr[mid:])
         result = merge(left,right)
     return result
-arr = [1,2,3,-1,0,5,3,-2]
+arr = [1,2,3,-1,0,5,3,-2 ,-11,77]
 print(findmid(arr))
 
     
