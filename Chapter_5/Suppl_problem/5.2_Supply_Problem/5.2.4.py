@@ -9,8 +9,9 @@ class sort:
             for j in range(i+1,len(arr)):
                 if arr[min] > arr[j]:
                     min = j
-                    count_random +=1 
-            arr[i] ,arr[min] = arr[min] , arr[i] #swaping
+            if arr[min] != i:
+                arr[i] ,arr[min] = arr[min] , arr[i]#swaping
+                count_random +=1 
         return arr,count_random
    
 arr= [6,5,4,3,2,1]
